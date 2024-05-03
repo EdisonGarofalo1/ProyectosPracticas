@@ -1,0 +1,80 @@
+
+
+
+<form [formGroup]="clientForm" (ngSubmit)="Guardar()" class="container mt-4">
+    <h1>
+      {{  'Actualizar Cliente'  }}      
+    
+  </h1>
+  <!-- <input type="text" hidden formControlName="id" id="id" class="form-control"> -->
+  
+    <div class="row">
+        <div class="col-md-6">
+    
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" formControlName="name" id="name" class="form-control">
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="lastName">lastName:</label>
+          <input type="text" formControlName="lastName" id="lastName" class="form-control">
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+    
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" formControlName="email" id="email" class="form-control">
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="phonenumber">phonenumber:</label>
+          <input type="text" formControlName="phonenumber" id="phonenumber" class="form-control">
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+    
+        <div class="form-group">
+          <label for="address">address:</label>
+          <input type="text" formControlName="address" id="address" class="form-control">
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="referencceaddress">referencceaddress:</label>
+          <textarea type="text" formControlName="referencceaddress" id="referencceaddress" class="form-control"> </textarea>
+        </div>
+
+    </div>
+
+    
+
+
+
+
+
+
+</div>
+<br>
+<div class="row mt-3">
+    <div class="col-md-2">
+        <button type="button" class="btn btn-danger" (click)="salir()">Cancelar</button>
+      
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary" [disabled]="clientForm.invalid" >  {{  'Actualizar'  }}</button>
+    </div>
+   
+</div>
+
+  </form>
+

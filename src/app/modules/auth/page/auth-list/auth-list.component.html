@@ -1,0 +1,72 @@
+
+<div class="card">
+    <div class="card-body"  >
+      <br>
+      <h1 class="titulo"> {{pageTitle}}</h1>
+  
+  <br>
+ 
+  <div class="col-sm-4">
+    <button type="button" class="btn btn-sm btn-dark" routerLink="/auth/auth/carga-masiva" ><i class="fa fa-plus" aria-hidden="true" ></i>  Carga Masiva</button>
+  
+  </div>  
+  <br>
+      <table class="table table-hover">
+  
+  
+      <thead>
+        <tr class="table-dark">
+          <th >#</th>
+          <th >id</th>
+          <th >Username</th>
+          <th >Email</th>
+          
+          <th >Rol</th>
+          <th >Estado User</th>
+          
+          <th>Editar</th>
+          <th>Cambiar</th>
+          
+        </tr>
+  
+      
+      </thead>
+      <tbody>
+        <tr *ngFor=" let list of filteredUsers; let i= index" >
+            <td>{{i+1}}</td>
+          <td>{{list.userid}}</td>
+          <td>{{list.username}}  </td>
+          <td>{{list.email}}</td>
+          <td>{{list.rol.rolName}}</td>
+          <td>{{list.userStatus.description}}</td>
+       
+          
+
+           
+          
+          <td style="width: 10%;" >
+            <button routerLink="/auth/auth/edit/{{list.userid}}" class="btn btn-primary btn-sm float-end">Editar</button>
+          
+          </td>
+
+          <td style="width: 10%;" >
+            <button routerLink="/auth/auth/estado/{{list.userid}}" class="btn btn-danger btn-sm float-end">Estado</button>
+          
+          </td>
+        
+         
+       
+        
+    
+        </tr>
+        
+       
+      </tbody>
+      
+    </table>
+
+</div>
+  </div>
+    
+
+

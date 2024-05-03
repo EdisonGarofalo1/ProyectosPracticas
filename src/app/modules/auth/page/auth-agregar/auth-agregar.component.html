@@ -1,0 +1,52 @@
+
+<form (ngSubmit)="onSubmit()">
+
+  <h1>{{ pageTitle }}</h1>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username" class="form-control" [(ngModel)]="user.username" name="username" [disabled]="isEstadoMode"required>
+    <div *ngIf="!user.username" class="text-danger">El nombre de usuario es requerido</div>
+  
+  </div>
+
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" class="form-control" [(ngModel)]="user.email" name="email" [disabled]="isEstadoMode" required >
+  
+    <div *ngIf="!user.email" class="text-danger">El email de usuario es requerido</div>
+  
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" class="form-control" [(ngModel)]="user.password" name="password" [disabled]="isEstadoMode" required>
+  </div>
+  <div class="form-group">
+    <label for="rol">Role:</label>
+    <select id="rol" class="form-control" [(ngModel)]="user.rol.rolId" name="rol" [disabled]="isEstadoMode"> 
+      <option *ngFor="let rol of rolList" [value]="rol.rolId">{{ rol.rolName }}</option>
+    </select>
+  </div>
+
+  <div class="form-group"  *ngIf="showUserStatus">
+    <label for="userStatus">User Status:</label>
+    <select id="userStatus" class="form-control" [(ngModel)]="user.userStatus.statusid" name="userStatus" required>
+      <option *ngFor="let status of userStatusList" [value]="status.statusid">{{ status.description }}</option>
+    </select>
+  </div>
+
+
+  <div class="row mt-3">
+    <div class="col-md-2">
+        <button type="button" class="btn btn-danger" (click)="salir()">Cancelar</button>
+      
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary">Guadar</button>
+    </div>
+   
+</div>
+  
+ 
+</form>

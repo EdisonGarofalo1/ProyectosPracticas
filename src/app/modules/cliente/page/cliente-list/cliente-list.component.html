@@ -1,0 +1,73 @@
+
+<div class="card">
+    <div class="card-body"  >
+      <br>
+      <h1 class="titulo"> Lista Clientes </h1>
+
+
+  
+  <br>
+
+  <div class="col-sm-4">
+    <button type="button" class="btn btn-sm btn-dark" routerLink="/auth/auth/carga-masiva" ><i class="fa fa-plus" aria-hidden="true" ></i>  Carga Masiva</button>
+  
+  </div>  
+ 
+  <br>
+      <table class="table table-hover">
+  
+  
+      <thead>
+        <tr class="table-dark">
+          <th >#</th>
+          <th >id</th>
+          <th >name</th>
+          <th >lastName</th>
+          
+          <th >identification</th>
+          <th >email</th>
+          
+          <th>Editar</th>
+          
+        </tr>
+  
+      
+      </thead>
+      <tbody>
+        <tr *ngFor=" let list of lista; let i= index" >
+            <td>{{i+1}}</td>
+          <td>{{list.clientid}}</td>
+          <td>{{list.name}}  </td>
+          <td>{{list.lastName}}</td>
+          <td>{{list.identification}}</td>
+          <td>{{list.email}}</td>
+      
+       
+    
+       
+          
+
+           
+          
+          <td style="width: 10%;" >
+            <button routerLink="/home/cliente/edit/{{list.clientid}}" class="btn btn-primary btn-sm float-end">Editar</button>
+          
+          </td>
+        
+         
+       
+        
+    
+        </tr>
+        
+       
+      </tbody>
+      
+    </table>
+
+</div>
+  </div>
+    
+
+
+
