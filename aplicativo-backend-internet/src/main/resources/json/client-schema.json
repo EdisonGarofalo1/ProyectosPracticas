@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+   
+    "name": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "lastName": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "identification": {
+      "type": "string",
+       "pattern": "^[0-9]{10,13}$"
+    
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "phonenumber": {
+      "type": "string",
+       "pattern": "^09[0-9]{8,11}$"
+ 
+    },
+    "address": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 100
+    },
+    "referencceaddress": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 100
+    }
+  },
+  "required": ["name", "lastName", "identification", "email", "phonenumber", "address", "referencceaddress"]
+}
+
+    

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+ 
+    "description": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}[0-9]{4}$"
+    },
+    "cash": {
+      "type": "object",
+      "properties": {
+        "cashid": {
+          "type": "integer"
+        }
+      },
+      "required": ["cashid"]
+    },
+    "usergestorid": {
+      "type": "integer"
+    }
+  },
+  "required": ["description", "cash", "usergestorid"]
+}

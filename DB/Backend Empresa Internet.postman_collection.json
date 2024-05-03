@@ -1,0 +1,923 @@
+{
+	"info": {
+		"_postman_id": "9dbe154f-0888-4457-8949-f03331000a6f",
+		"name": "Backend Empresa Internet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34172143"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8182/api/client/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/client/ver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"ver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por identificacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"identification\":\"1234567890\"\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/client/buscar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"buscar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Edisonttt121\",\r\n  \"lastName\": \"Garofalo12\",\r\n  \"identification\": \"09046101873\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"phonenumber\": \"0912345678\",\r\n  \"address\": \"123 Main St, City City de mexico\",\r\n  \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/client/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carga masiva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Karen Silva\",\r\n        \"lastName\": \"Garcia  P\",\r\n        \"identification\": \"0704611914\",\r\n        \"email\": \"examplo@gmail.com\",\r\n        \"phonenumber\": \"0980090688\",\r\n        \"address\": \"123 Main St, City City de mexico\",\r\n        \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n    },\r\n    {\r\n        \"name\": \"Maria Silva\",\r\n        \"lastName\": \"Garcia  P\",\r\n        \"identification\": \"0704611914\",\r\n        \"email\": \"examplo@gmail.com\",\r\n        \"phonenumber\": \"0980090688\",\r\n        \"address\": \"123 Main St, City City de mexico\",\r\n        \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n    },\r\n    {\r\n        \"name\": \"Lucas1 Silva\",\r\n        \"lastName\": \"Garcia  P\",\r\n        \"identification\": \"0704611914\",\r\n        \"email\": \"examplo@gmail.com\",\r\n        \"phonenumber\": \"0980090688\",\r\n        \"address\": \"123 Main St, City City de mexico\",\r\n        \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/client/crearmasiva?accion=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"crearmasiva"
+							],
+							"query": [
+								{
+									"key": "accion",
+									"value": "1",
+									"description": "1:para cliete 2: User"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carga masiva Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Karen Silva\",\r\n        \"lastName\": \"Garcia  P\",\r\n        \"identification\": \"0704611914\",\r\n        \"email\": \"examplo@gmail.com\",\r\n        \"phonenumber\": \"0980090688\",\r\n        \"address\": \"123 Main St, City City de mexico\",\r\n        \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n    },\r\n    {\r\n        \"name\": \"Maria Silva\",\r\n        \"lastName\": \"Garcia  P\",\r\n        \"identification\": \"0704611914\",\r\n        \"email\": \"examplo@gmail.com\",\r\n        \"phonenumber\": \"0980090688\",\r\n        \"address\": \"123 Main St, City City de mexico\",\r\n        \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n    },\r\n    {\r\n        \"name\": \"Lucas1 Silva\",\r\n        \"lastName\": \"Garcia  P\",\r\n        \"identification\": \"0704611914\",\r\n        \"email\": \"examplo@gmail.com\",\r\n        \"phonenumber\": \"0980090688\",\r\n        \"address\": \"123 Main St, City City de mexico\",\r\n        \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/client/crearmasiva?accion=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"crearmasiva"
+							],
+							"query": [
+								{
+									"key": "accion",
+									"value": "1",
+									"description": "1:para cliete 2: User"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Lala\",\r\n  \"lastName\": \"Pamela\",\r\n  \"identification\": \"08046101873\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"phonenumber\": \"0912345678\",\r\n  \"address\": \"123 Main St, City City de mexico\",\r\n  \"referencceaddress\": \"Near Park, City la ciduda de los angesle dd\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/client/editar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"client",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8182/api/user/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"user",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/user/ver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"user",
+								"ver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aprobar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":7\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/user/aprobar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"user",
+								"aprobar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asignacion caja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":7\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/user/assign?userId=7&cashId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"user",
+								"assign"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "7"
+								},
+								{
+									"key": "cashId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"username\": \"momonddhdhdWW1\",\r\n\"email\": \"edison@hotmail.com\",\r\n\"password\": \"123456MO\",\r\n\"rol\": {\r\n\"rolId\": 3\r\n},\r\n\r\n\"usercreate\": 1,\r\n\"userStatus\": {\r\n\"statusid\": \"I\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/user/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"user",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"username\": \"Animeflvx9\",\r\n\"email\": \"animeflv@hotmail.com\",\r\n\"password\": \"123456MO1\",\r\n\"rol\": {\r\n\"rolId\": 3\r\n},\r\n\r\n\"usercreate\": 3,\r\n\"userStatus\": {\r\n\"statusid\": \"E\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/user/editar/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"user",
+								"editar",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contrato",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8182/api/contract/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/ver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"ver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar contrato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/cacelacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"cacelacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear contrato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startdate\": \"2024-05-01\",\r\n  \"enddate\": \"2024-12-31\",\r\n  \"service\": {\r\n    \"serviceid\": 2\r\n  },\r\n  \"statuscontract\": {\r\n    \"statusid\": \"VIG\"\r\n  },\r\n  \"client\": {\r\n    \"clientid\": 1\r\n  },\r\n  \"methodpayment\": {\r\n    \"methodpaymentid\": 2\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear Services",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"servicename\": \"Servicio de Prueba02\",\r\n    \"servicedescription\": \"Descripción del servicio de prueba02\",\r\n    \"price\": \"99.99\",\r\n    \"device\": [\r\n        {\r\n            \"devicename\": \"Equipo 1\"\r\n        },\r\n        {\r\n            \"devicename\": \"Equipo 2\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/crearservice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"crearservice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear forma pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n  \"description\": \"Pagos con tarjeta de crédito o débito.\"\r\n   },\r\n   {\r\n  \"description\": \"Efectivo\"\r\n   } ,\r\n    \r\n    {\r\n  \"description\": \"Domiciliación bancaria\"\r\n   } ,\r\n     {\r\n  \"description\": \"Transferencia automática\"\r\n   }  ,\r\n    {\r\n  \"description\": \"Transferencias bancarias.\"\r\n   } ,\r\n   \r\n     {\r\n  \"description\": \"Monederos digitales (como Apple Pay y Google Pay)\"\r\n   },\r\n   {\r\n  \"description\": \"Pagos con criptomonedas.\"\r\n   },\r\n    {\r\n  \"description\": \"Tarjetas regalo, tarjetas prepago\"\r\n   }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/crearfromapago",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"crearfromapago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cambio servicio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startdate\": \"2024-05-01\",\r\n  \"service\": {\r\n    \"serviceid\": 2\r\n  },\r\n\r\n  \"client\": {\r\n    \"clientid\": 1\r\n  },\r\n  \"methodpayment\": {\r\n    \"methodpaymentid\": 2\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/editar?contractid=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"editar"
+							],
+							"query": [
+								{
+									"key": "contractid",
+									"value": "2",
+									"description": "el id del contrato"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pagos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"paymentdate\": \"2024-05-01\",\r\n  \"client\": {\r\n    \"clientid\": 1\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/pagos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"pagos"
+							],
+							"query": [
+								{
+									"key": "contractid",
+									"value": "2",
+									"description": "el id del contrato",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cambio forma pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startdate\": \"2024-05-01\",\r\n  \"service\": {\r\n    \"serviceid\": 2\r\n  },\r\n\r\n  \"client\": {\r\n    \"clientid\": 1\r\n  },\r\n  \"methodpayment\": {\r\n    \"methodpaymentid\": 2\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/contract/cambiometodopago?contractid=2&methodpaymentid=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"contract",
+								"cambiometodopago"
+							],
+							"query": [
+								{
+									"key": "contractid",
+									"value": "2",
+									"description": "el id del contrato"
+								},
+								{
+									"key": "methodpaymentid",
+									"value": "4",
+									"description": "id metodo pago"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turno",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8182/api/turn/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"turn",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1\r\n\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/turn/ver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"turn",
+								"ver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear turno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"cash\": {\r\n\"cashid\": 1\r\n},\r\n  \"usergestorid\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/turn/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"turn",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear atencion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"turn\": {\r\n        \"turnid\": 1\r\n    },\r\n    \"client\": {\r\n        \"clientid\": 1\r\n    },\r\n    \"attentionType\": {\r\n        \"attentiontypeid\": \"AC\"\r\n    },\r\n    \"attentionStatus\": {\r\n        \"statusid\": 1\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/turn/attention",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"turn",
+								"attention"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"cash\": {\r\n\"cashid\": 1\r\n},\r\n  \"usergestorid\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/turn/editar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"turn",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sesion",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"username\":\"Edison\",\r\n\t\r\n\t\"password\":\"123456\"\r\n}\r\n\r\n{userName: 'Edison', password: '123456'}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/sesion/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"sesion",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"username\":\"Edison\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8182/api/sesion/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8182",
+							"path": [
+								"api",
+								"sesion",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

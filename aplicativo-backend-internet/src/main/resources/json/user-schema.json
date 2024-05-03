@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+
+    "username": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 20,
+      "pattern": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]+$"
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "password": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 30,
+      "pattern": "^(?=.*\\d)(?=.*[A-Z])[A-Za-z\\d]{8,30}$"
+    },
+    "rol": {
+      "type": "object",
+      "properties": {
+        "rolId": {
+          "type": "integer"
+        }
+      },
+      "required": ["rolId"]
+    },
+   
+    "usercreate": {
+      "type": "integer"
+    },
+    
+    "userStatus": {
+      "type": "object",
+      "properties": {
+        "statusid": {
+          "type": "string"
+        }
+        
+      },
+      "required": ["statusid"]
+    }
+  },
+  "required": ["username", "email", "password", "rol",  "usercreate",  "userStatus"]
+}
